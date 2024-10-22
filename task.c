@@ -21,6 +21,18 @@ int main(void)
     """
     在下方编写你的代码
     """
+     unsigned char start=0x01;
+
+    while(1)
+   {
+        P0=~start;
+        delay_ms(500);
+        start <<= 1;
+        if(start == 0x00)
+        {
+            start = 0x01;
+        }
+   }
     
 
  
